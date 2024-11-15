@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'Spam/Css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Spam/Css/Style.css' %}">
+    <link rel="stylesheet" href="{% static 'Spam/Css/radio.css' %}">
+    <title>Answer</title>
+    <style>
+        .AnswerSection {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        
+        .AnswerSection .answer {
+            color: white;
+            font-size: 5rem;
+            text-align: center;
+        }
+        
+        .backbtn, .backbtn:hover {
+            padding: 0em 1em;
+            color: #fff;
+            font-size: 3rem;
+            text-decoration: none;
+            border: 5px #fff solid;
+            border-radius: 0.2em;
+        } 
+        p.answer{
+            background-color:#00000080;
+        }
+        a.backbtn{
+            background-color:#00000080;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main Section Start -->
+    <section class="AnswerSection" style="background-color:#00000080">
+        <p class="answer">
+            {% if answer == "ham" %} Not Spam {% else %} Spam {% endif %}
+        </p>
+        <a href="/" class="backbtn">Back</a>
+    </section>
+    
+    <!-- Main Section End -->
+    {% load static %}
+<script src="{% static 'Js/JQuery.js' %}"></script>
+<script src="{% static 'Js/Bootstrap.min.js' %}"></script>
+<script src="{% static 'Js/Main.js' %}"></script>
+
+</body>
+
+</html>
